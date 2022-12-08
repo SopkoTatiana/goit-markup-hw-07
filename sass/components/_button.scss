@@ -1,0 +1,64 @@
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 10px 32px;
+    min-width: 200px;
+
+    background-color: $accent-color;
+    color: $secondary-title-color;
+    cursor: pointer;
+    @include font (16px, 1.8, 0.06em);
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+
+    border: none;
+    transition: box-shadow $animation;
+
+        &:hover,
+        &:focus {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);    
+        }
+
+        &--footer {     
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        &_icon {
+            margin-left: 10px;
+        }
+
+}
+.button-modal {
+    display: block;
+    padding: 10px 52px;
+    margin: 0 auto;
+}
+.button--inversion {
+    padding: 6px 22px;
+    height: 38px;
+    min-width: 73px;
+
+    background-color: $bg-color-secondary;
+    color: $primary-title-color;
+
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+        color: $secondary-title-color;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+

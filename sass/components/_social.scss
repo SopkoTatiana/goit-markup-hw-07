@@ -1,0 +1,53 @@
+.social {
+    @include margin-top (16px);
+    @include margin-right (32px);
+    @include margin-left (32px);
+    @include margin-bottom (30px);
+    display: flex;
+    gap: 10px;
+}
+
+.social__link {
+    @extend %centering;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color $animation;
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+    }
+}
+
+.social__icon {
+    fill: $color-icon;
+    transition: fill $animation;
+
+    .social__link:hover &,
+    .social__link:focus & {
+        fill: $secondary-title-color;
+    }
+        &--footer {
+            fill: $secondary-title-color;
+            transition: fill $animation;
+        }
+}
+.social--margin {
+    margin: 0;
+}
+
+.social__link--footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+    }
+}
+
+
+
+
+
+
+

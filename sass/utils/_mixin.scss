@@ -1,0 +1,29 @@
+@mixin margin-right ($value) {
+    margin-right: $value;
+}
+@mixin margin-left ($value) {
+    margin-left: $value;
+}
+@mixin margin-top ($value) {
+    margin-top: $value;
+}
+@mixin margin-bottom ($value) {
+    margin-bottom: $value;
+}
+@mixin padding-top ($value) {
+    padding-top: $value;
+}
+@mixin padding-left ($value) {
+    padding-left: $value;
+}
+@mixin padding-right ($value) {
+    padding-right: $value;
+}
+@mixin padding-bottom ($value) {
+    padding-bottom: $value;
+}
+@mixin font ($f-size, $line-h, $letter-spac){
+    font-size: $f-size;
+    line-height: $line-h;   
+    letter-spacing: $letter-spac;
+}

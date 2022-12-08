@@ -1,0 +1,26 @@
+.logo {
+    display: block;
+    color: $accent-color;
+    @include font (26px, 1.2, 0.03em);
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+
+    &--margin-header {
+        @include padding-top (24px);
+        @include padding-bottom (24px);
+        @include margin-right (94px);           
+        }
+    
+    &--color-header {
+        color: #000;
+    }
+    &--margin-footer {
+        margin-bottom: 20px;
+    }
+
+    &--color-footer {
+        color: $secondary-title-color;
+    }
+}
+

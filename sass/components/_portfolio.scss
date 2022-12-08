@@ -1,0 +1,70 @@
+.filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap: 8px;
+}
+.galery-project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__text {
+        padding: 20px 24px;
+        border: 1px solid #EEEEEE;
+    }
+    &__name {
+        color: $primary-title-color;
+        @include font (18px, 2, 0.06em);
+        margin-bottom: 4px;
+    }
+
+    &__filter {
+        @include font (16px, 1.8, 0.03em);
+        font-style: normal;
+        font-weight: 400;
+        color: $text-color;
+    }
+
+    &__overlay {
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+.galery-project__item {
+    flex-basis: calc((100% - 60px) / 3);
+    background-color: $secondary-title-color;
+    border-radius: 4px;
+
+    cursor: pointer;
+    transition: box-shadow $animation;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+.galery-project__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    padding: 63px 24px;
+    @include font (18px, 1.5, 0.03em);
+    font-weight: 400;
+
+    color: $secondary-title-color;
+    background: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(110%);
+    transition: transform $animation;
+
+    .galery-project__item:hover & {
+        transform: translateY(0);
+    }
+}
+

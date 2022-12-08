@@ -1,0 +1,101 @@
+.page-header {
+    border-bottom: 1px solid #ececec;
+    &__container {
+            @extend %centering;
+        }
+}
+
+.main-nav {
+    @extend %centering;
+}
+
+.site-nav {
+    display: flex;
+    &--active::after {
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+    
+            content: " ";
+            display: block;
+    
+            width: 100%;
+            height: 4px;
+    
+            background: $accent-color;
+            border-radius: 2px;
+        }
+}
+
+.site-nav__link {
+    display: block;
+    @include padding-top (32px);
+    @include padding-bottom (32px);
+
+    color: $primary-title-color;
+    @include font (14px, 1.2, 0.02em);
+    font-style: normal;
+    font-weight: 500;
+
+    transition: color $animation;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+
+        &--active {
+            color: $accent-color;
+        }
+}
+.site-nav__item {
+    position: relative;
+    
+    &:not(:last-child) {
+            @include margin-right (50px);
+        }
+}
+
+.contact {
+    display: flex;
+    @include margin-left (auto);
+
+}
+.contact__item {
+    @include font (14px, 1.2, 0.02em);
+    font-style: normal;
+    font-weight: 500;
+    
+    &:not(:last-child) {
+            @include margin-right (30px);
+        }
+}
+.contact__link {
+    @extend %centering;
+
+    @include padding-top (32px);
+    @include padding-bottom (32px);
+
+    color: $text-color;
+
+    transition: color $animation;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+}
+.contact__icon {
+    @include margin-right (10px);
+    fill: $text-color;    
+    transition: fill $animation;
+
+        .contact__link:hover &,
+        .contact__link:focus & {
+            fill: $accent-color;
+        }
+}
+
+
+
+
